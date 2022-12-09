@@ -13,7 +13,7 @@ export class SignUpController implements IController {
     ]
     for (const field of requiredFields) {
       if (!httpRequest.body[field]) {
-        return badRequest(new MissingParamError(field));
+        return badRequest(new MissingParamError(field))
       }
     }
     return {
