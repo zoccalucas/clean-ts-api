@@ -16,15 +16,6 @@ const makeEmailValidator = (): IEmailValidator => {
   return new EmailValidatorMockStub()
 }
 
-const makeEmailValidatorWithError = (): IEmailValidator => {
-  class EmailValidatorMockStub implements IEmailValidator {
-    isValid (email: string): boolean {
-      throw new Error()
-    }
-  }
-  return new EmailValidatorMockStub()
-}
-
 const makeSut = (): ISutTypes => {
   const emailValidatorMockStub = makeEmailValidator()
   const sut = new SignUpController(emailValidatorMockStub)
