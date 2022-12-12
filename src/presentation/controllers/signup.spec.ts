@@ -14,10 +14,8 @@ const makeSut = (): ISutTypes => {
       return true
     }
   }
-
   const emailValidatorMockStub = new EmailValidatorMockStub()
   const sut = new SignUpController(emailValidatorMockStub)
-
   return {
     emailValidatorMockStub,
     sut
