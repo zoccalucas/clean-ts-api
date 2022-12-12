@@ -1,6 +1,6 @@
 import { SignUpController } from "./signup"
 import { MissingParamError, InvalidParamError, ServerError } from "../errors"
-import { IEmailValidator } from "../protocols/email-validator"
+import { IEmailValidator } from "../protocols"
 
 interface ISutTypes {
   emailValidatorMockStub: IEmailValidator,
