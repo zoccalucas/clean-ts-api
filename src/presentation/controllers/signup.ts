@@ -1,4 +1,4 @@
-import { IAddAccount } from './../domain/usecases/add-account'
+import { IAddAccount } from '../../domain/usecases/add-account'
 import { InvalidParamError, MissingParamError } from '../errors'
 import { IController, IHttpRequest, IHttpResponse, IEmailValidator } from "../protocols"
 import { badRequest, serverError } from "../helpers/http-helper"
